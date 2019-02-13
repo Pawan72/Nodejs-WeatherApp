@@ -32,13 +32,12 @@ geocode.geocodeAddress(argv.address, (errorMessage, result) => {
 	if(errorMessage){
 		console.log(errorMessage);
 	}else{
-	console.log(JSON.stringify(result, undefined, 5));	//console.log(`The temperature at ${argv.address} is: ${JSON.parse(result)}`);
+	console.log(JSON.stringify(result, undefined, 5));	
 	}
 })
 });	
 
-// var lat = argv.address.latitude;
-// var long = argv.address.longitude;
+
 
 
 	

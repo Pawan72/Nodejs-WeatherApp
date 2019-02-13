@@ -4,7 +4,7 @@ var geocodeAddress = (address, callback) => {
 	var encodedAddress = encodeURIComponent(address);
 	
 	request({
-	url: `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}&key=AIzaSyAraTIpN8IyNVZ0qw0vXcthYKn1ldFaX1c`,
+	url: `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}&key=#your-googlemap-apiKey`,
 	json: true
 	},(error, response, body) => {
 	
@@ -18,9 +18,6 @@ var geocodeAddress = (address, callback) => {
 			latitude: body.results[0].geometry.location.lat,
 			longitude: body.results[0].geometry.location.lng
 		});
-	// console.log(`address: ${body.results[0].formatted_address}`); 
- //    console.log(`latitude: ${body.results[0].geometry.location.lat}`); 
-	// console.log(`longitude: ${body.results[0].geometry.location.lng}`);
 	}
 	
 });
